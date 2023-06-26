@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" type="image/png" href="img/WebLogo.png">
+            <meta http-equiv="X-UA-Compatible" content="IE-edge">
+            <meta name="viewport" content="width=device-width, intial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+            <title>Project Page</title>
+            <!--Stylesheet----------------------------------->
+            <link rel="stylesheet" type="text/css" href="css/projects.css"/>
+            <script src="./js/app.js" defer></script>
+            <script src="js/jquery-3.6.3.min.js"></script>
+        </head>
+<body>
+    <header>
+        <nav>
+            <div class="maaz">
+                <h2>Maaz Ghazi</h2>
+            </div>
+            <ul class="nav_links">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="ecommerce.html">E-commerce</a>
+                </li>
+                <li>
+                    <a href="blog.html">Blog</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact Me</a>
+                </li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line1"></div>
+                <div class="line1"></div>
+            </div>
+        </nav>
+    </header> 
+    <!--===Project-Section======================================================-->
+  <section id="project">
+    <!--heading--------------->
+    <div class="container">
+        <h1>Projects</h1>
+        <p>Here you can view some of the projects I have worked on!</p>
+    <!--filter--------->
+    <ul class="portfolio-filter">
+      <li class="list portfolio-filter-active" data-filter="all">All</li>
+      <li class="list" data-filter="design">Engineering Design</li>
+      <li class="list" data-filter="CAD">CAD</li>
+      <li class="list" data-filter="data">Data Analytics</li>
+      <li class="list" data-filter="programming">Programming</li>
+  </ul>
+    </div>
+  <!--container--------->
+  <div class="portfolio-container">
+     <!-- <!-7------------>
+     <a href="SafeSieze.html" class="portfolio-box design"><p></p>
+      <img alt="" src="img/SafeSeizelogo.png">
+    </a> 
+    <!--5------------>
+    <a href="Debrief.html" class="portfolio-box programming">
+      <img alt="" src="img/DebriefLgo_PrjectPg.png">
+    </a>
+    <!--1------------>
+    <a href="OSTO.html" class="portfolio-box CAD design"><p>OSTO+</p>
+      <img alt="" src="img/7.png">
+    </a>
+    <!--2------------>
+    <a href="IHIP.html" class="portfolio-box CAD design" ><p>HIP Replacement</p>
+      <img alt="" src="img/14.png">
+    </a>
+    <!--3------------>
+    <a href="Cast.html" class="portfolio-box design" ><p>Carpal Tunnel Cast</p>
+      <img alt="" src="img/gabrielo_DP0_Milestone14.jpg">
+    </a>
+    <!--4------------>
+    <a href="ecommerce.html" class="portfolio-box data">
+      <img alt="" src="img/GoldyLocks.png">
+    </a>
+
+    <!-- <!-6------------>
+    <a href="UNProject.html" class="portfolio-box design"><p>Water System</p>
+      <img alt="" src="img/Un-4.png">
+    </a> 
+  </div>
+  </section>
+  <!--js---------------------------------->
+ 
+  <script>
+    /*blog-filter-menu----------------------------*/
+    $(document).on('click','.portfolio-filter li',function(){
+            $(this).addClass('portfolio-filter-active').siblings().removeClass('portfolio-filter-active')
+        });
+        
+     /*portfolio-filter---------------------------------*/
+     $(document).ready(function(){
+            $('.list').click(function(){
+                const value = $(this).attr('data-filter');
+                if(value == 'all'){
+                    $('.portfolio-box').show('1000');
+                }
+                else{
+                    $('.portfolio-box').not('.'+value).hide('1000');
+                    $('.portfolio-box').filter('.'+value).show('1000');
+                }
+            });
+        });
+  </script>
+</body>
+</html>

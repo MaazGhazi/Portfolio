@@ -1,0 +1,266 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Navagation Bar    http://127.0.0.1:5500/portfolio/index.html  */
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    min-height: 8vh;
+    box-shadow: 0 0 3px black;
+    background-color: #2b7a78;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.maaz{
+    color: white;
+    letter-spacing: 1px;
+    font-size: large;
+}
+
+.nav_links{
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+}
+.nav_links li{
+    list-style: none;
+}
+
+.nav_links a{
+    color:white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: small;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .1s ;
+}
+
+.nav_links a:hover {
+color: #17252a;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color:white;
+    margin: 3px;
+}
+
+
+/*For Ipadish Screen Adjustment*/ 
+@media screen and (max-width: 1024px){
+    .nav_links{
+        width: 50%;
+}
+}
+
+
+/*For phone Screen Adjustment*/ 
+@media screen and (max-width: 768px){
+    header{
+        overflow: hidden;
+    }
+    .nav_links{
+        /* added by janik 6:02 8/16/2022 */
+		/* display: none !important;  */
+        position: absolute;
+         right: 0px;
+         height: 92vh;
+         top: 8vh;
+         background-color: #2b7a78;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         width: 30%;
+         transform: translate(100%);
+         transition: transform 0.5s ease-in;
+         z-index: 1;
+}
+    .nav_links li{
+        opacity: 0;
+    }
+
+    .burger{
+        display: block;
+    }
+    
+}
+
+.nav-active{
+    transform: translate(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translate(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+
+/* janik same date 16th */
+html, body {
+	overflow-x: hidden;
+  }
+  body {
+	position: relative;
+    background-color: #f6f6f2
+    
+  }
+
+
+/* janik 8/16/2022 6:30 */
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 50px 10px 0px;
+    width: 100%;
+    max-width: 100%;
+	flex-wrap: wrap;
+}
+
+.container .inner {
+	display: flexbox;
+	float: left;
+}
+
+/* till here ^ */
+
+.container .home-info .home-img{
+    display: flex;
+    float: right;
+}
+.home-info h3{
+font-size:75px;
+width: 450px;
+margin-left: 30px;
+border-bottom: 5px dashed;
+margin-bottom: 30px;
+color: #17252a;
+border-color: #388087;
+
+}
+
+.home-info p{
+font-size: large;
+padding: 0px 30px 20px;
+max-width: 500px;
+line-height: 30px;
+color: #17252a;
+font-weight: 500;
+}
+
+.home-img{
+    width: 275px;
+    left: -210px;
+    position:relative;
+}
+
+.home-img img{
+    border-radius: 25px;
+}
+
+.feat_title{
+    margin-left: 28px;
+    padding-top: 0px;
+    font-size: x-large;
+    color: #17252a;
+}
+
+.feat_title h2{
+    margin-top: 60px;
+}
+
+.feat_title #feature_Con{
+    margin-top: 28px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    width: calc(100% + 40px);
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    
+}
+
+a {
+    text-decoration: none;
+    transition: .3s;
+}
+.feature_icon {        
+    height: 319px;
+    width: 319px;
+    margin-bottom: 100px;
+    margin-right: 25px;
+    transition: .5s;
+    border-radius: 25px;
+    border: 10px solid #388087; 
+}
+
+.feature_icon:hover{
+    transform: scale(1.1);
+    border: 10px solid #17252a;
+    }
+    
+
+.feature_icon .feature_Img {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    
+}
+
+.feature_icon .feature_Img img {
+    min-height: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.feature_icon .feature_text {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+}
+
+.feature_icon .feature_text .con_title {
+    position: absolute;
+    bottom: 0px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 40px;
+    margin: 20px;
+    z-index: 1;
+    -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+}
+
+/* Screen Adjustment */
+@media screen and (max-width: 1005px){
+    .home-img{
+       display: none;
+    }
+}
